@@ -246,7 +246,7 @@ The `Movie` model should have:
 
 ## Iteration #8: Adding a new movie
 
-So far we don't have any movies in our database so let's enable a user to **add new celebrities to the database**
+So far we don't have any movies in our database so let's enable a user to **add new movies to the database**
 
 |     Route     | HTTP Verb |      Description              |
 |---------------|-----------|-------------------------------|
@@ -275,7 +275,7 @@ Here's the route we will be using:
 
 |     Route     | HTTP Verb |      Description      |
 |---------------|-----------|-----------------------|
-| `/movies/` |    GET    | Show all celebrities |
+| `/movies/` |    GET    | Show all movies |
 
 ### Steps we will follow in this iteration:
 
