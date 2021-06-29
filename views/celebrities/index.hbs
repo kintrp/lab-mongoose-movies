@@ -1,0 +1,17 @@
+<h2>Celebrities</h2>
+
+  {{#each allCelebrities}}
+            <p>{{name}}</p>
+            <a class="general-button readMore-button" href="/celebrities/{{_id}}">Read more</a>
+
+            <form action="/celebrities/{{this._id}}/delete" method="POST">
+            <button class="general-button delete-button" type="sumbit">Delete</button>
+
+            {{!-- <form action="/celebrities/{{celeb.id}}/edit" method="POST">
+            <button class="general-button delete-button" type="sumbit">edit</button> --}}
+            
+            </form>
+  {{/each}}
+
+
+  
