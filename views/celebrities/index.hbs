@@ -1,17 +1,32 @@
-<h2>Celebrities</h2>
+<h2>all celebrities</h2>
 
   {{#each allCelebrities}}
-            <p>{{name}}</p>
-            <a class="general-button readMore-button" href="/celebrities/{{_id}}">Read more</a>
 
-            <form action="/celebrities/{{this._id}}/delete" method="POST">
-            <button class="general-button delete-button" type="sumbit">Delete</button>
+          <p>{{name}}</p>
+          
+          <ul>
+            <li>
+              <a class="general-button readMore-button" href="/celebrities/{{_id}}">Read more</a>
+            </li>
+            <li>
+              <form action="/celebrities/{{this._id}}/delete" method="POST"></form>
+              <button class="general-button delete-button" type="sumbit">Delete</button>
+            </li>
+          </ul>  
 
             {{!-- <form action="/celebrities/{{celeb.id}}/edit" method="POST">
             <button class="general-button delete-button" type="sumbit">edit</button> --}}
             
             </form>
+
   {{/each}}
+
+              <a href="http://localhost:3000/celebrities/new" class="buttonAdd">Add a new celebrity</a> <br>
+              <a href="http://localhost:3000" class="button">Back to movies</a>
+
+
+
+
 
 
   
