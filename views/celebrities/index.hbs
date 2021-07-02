@@ -8,21 +8,19 @@
             <li>
               <a class="general-button readMore-button" href="/celebrities/{{_id}}">Read more</a>
             </li>
+
             <li>
-              <form action="/celebrities/{{this._id}}/delete" method="POST"></form>
+              <form action="/celebrities/{{this._id}}/delete" method="POST">
               <button class="general-button delete-button" type="sumbit">Delete</button>
+              </form>
             </li>
           </ul>  
-
-            {{!-- <form action="/celebrities/{{celeb.id}}/edit" method="POST">
-            <button class="general-button delete-button" type="sumbit">edit</button> --}}
             
-            </form>
 
   {{/each}}
 
-              <a href="http://localhost:3000/celebrities/new" class="buttonAdd">Add a new celebrity</a> <br>
-              <a href="http://localhost:3000" class="button">Back to movies</a>
+              <a href="/celebrities/new" class="buttonAdd">Add a new celebrity</a> <br>
+              <a href="/" class="button">Back</a>
 
 
 

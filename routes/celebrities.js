@@ -34,11 +34,11 @@ router.post('/:id/delete', (req, res) => {
   const {id} = req.params
   Celebrity.deleteOne({_id : id})
     .then(celebDeleted => {
-  console.log(celebDeleted)
+    console.log(celebDeleted)
     res.redirect('/celebrities')
 })
-.catch(error => console.log('error while deleting celeb from DB', error))
-}) 
+    .catch(error => console.log('error while deleting celeb from DB', error)) 
+})  
 
 // Iteration 3: route for details
 
@@ -54,11 +54,6 @@ router.get('/:id', (req,res, next)=> {
 })
 
 // Iteration 6: edit
-
-/* router.get('/celebrities/:id/edit', (req, res, next) => {
-res.render('celebrities/new')
-.catch(error => console.log('error while retrieving celebrity', error))
-})  */
 
 router.get('/:id/edit', (req, res, next) => {
   const {id} = req.params;

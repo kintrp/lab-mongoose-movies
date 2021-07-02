@@ -1,16 +1,30 @@
 <h1>Movies</h1>
+
 {{#each movies}}
-    title: <h3>{{this.title}}</h2>
+    title: <h3>{{this.title}}</h3>
     plot: <h3>{{this.plot}}</h3>
+    genre: <h3>{{this.genre}}</h3>
+
     {{#each this.cast}}
     director: <h3>{{ name }}</h3>   
     {{/each}}
-    <a href="/movies/{{ this._id }}/edit">Edit</a>
+    
+    <a href="/movies/{{this._id}}/edit">Edit</a>
+
+            <form action="/movies/{{this._id}}/delete" method="POST">
+                <button class="general-button delete-button" type="sumbit">Delete</button>
+            </form>
+
 {{/each}}
 <br>
 
+
+
     <a href="/movies/new" class="buttonAdd">Add new movie</a> <br>
 
-    <a href="http://localhost:3000" class="button">Back to celebrities</a>
+    <a href="/" class="button">Back</a>
+
+
+
 
 

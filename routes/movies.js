@@ -66,16 +66,16 @@ router.post('/:id/', (req, res) => {
     });
 });
 
-//Route: EDIT
+//Route: DELETE
 
-/* router.post('/:id/delete', (req, res) => {
+router.post('/:id/delete', (req, res) => {
   const {id} = req.params
   Movie.deleteOne({_id : id})
-    .then(celebDeleted => {
-  console.log(celebDeleted)
+    .then(movieDeleted => {
+  console.log(movieDeleted)
     res.redirect('/movies')
 })
-.catch(error => console.log('error while deleting movie from DB', error))
-})  */
+.catch(error => console.log('error while deleting celeb from DB', error))
+})
 
 module.exports = router;
